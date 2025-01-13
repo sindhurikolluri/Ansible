@@ -4,7 +4,7 @@
   vars:
     course_name: "Devops with aws"
     duration: 120
-    topic: 
+    topics: 
     - linux
     - shell
     - ansible
