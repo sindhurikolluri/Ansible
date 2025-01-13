@@ -12,8 +12,8 @@
 #Installing packages in using ansible loops 
   - name: install packages
     ansible.builtin.package:
-     name: "{{ item }}"
-     state: installed
+      name: "{{ item }}"
+      state: installed
     loop:
     - mysql
     - git
