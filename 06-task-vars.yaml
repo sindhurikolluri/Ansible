@@ -1,10 +1,8 @@
 - name: variables
   hosts: local
   connection: local
-  vars: #play level variables
-    COURSE: "DevOps with AWS"
-    DURATION: 30 weeks
-    TRAINER: MYSELF
+  vars_files: #this will take the variables defined in the vars.yaml file
+  - vars.yaml
 
   tasks: 
   - name: print the variables
