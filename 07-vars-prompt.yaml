@@ -1,0 +1,15 @@
+# read in shell script is same as prompting 
+- name: variables using prompt
+  hosts: local
+  connection: local
+  vars_prompt: 
+  - name: COURSE
+    prompt: please enter the course name
+  - name: DURATION
+    prompt: Please enter the duration of the course
+  - name: TRAINER
+    prompt: Please enter the trainer name
+  tasks: 
+  - name: Printing the variables given
+    ansible.builtin.debug:
+      msg: "This is a practice {{COURSE}} with the duration of {{DURATION}} and trained by {{TRAINER}}"
