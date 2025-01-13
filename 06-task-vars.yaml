@@ -8,7 +8,7 @@
 
   tasks: 
   - name: print the variables
-    vars: #task level varibles
+    vars: #task level varibles and task level variables can override play level variables
       COURSE: Ansible
     ansible.builtin.debug:
       msg: "This is just practice {{ COURSE }} of {{ DURATION }} trained by {{ TRAINER }}"
