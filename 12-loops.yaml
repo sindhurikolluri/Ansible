@@ -9,6 +9,7 @@
     - This is first
     - This is second 
     - This is third 
+    
 #Installing packages in using ansible loops 
   - name: install packages
     become: yes
