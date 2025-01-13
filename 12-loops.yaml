@@ -10,10 +10,10 @@
     - This is second 
     - This is third 
 #Installing packages in using ansible loops 
-   - name: install packages
-     ansible.builtin.package:
-      name: "{{ item }}"
-      state: installed
-     loop:
-     - mysql
-     - git
+  - name: install packages
+    ansible.builtin.package:
+     name: "{{ item }}"
+     state: installed
+    loop:
+    - mysql
+    - git
