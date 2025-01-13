@@ -1,10 +1,10 @@
 - name: Devops course
   hosts: local
   connection: local 
-  vars:
+  vars: #map
     course_name: "Devops with aws"
     duration: 120
-    topics: 
+    topics: #list
     - linux
     - shell
     - ansible
@@ -14,7 +14,7 @@
       ci: jenkins
       cloud: aws
       containerization: docker
-  tasks: 
+  tasks: #map
   - name: print course information
     ansible.builtin.debug:
       msg: " Hello Iam learning {{ course_name }}, duration {{ duration }}, topics are: {{ topics }}, is it {{ live }}, tools covered are: {{ tools }}"
