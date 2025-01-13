@@ -7,7 +7,7 @@
        msg: "Hellp from play1 and Task1"
 
 - name: PLAY2
-  hosts: locol
+  hosts: local
   connection: local
   tasks:
   - name: PLAY2 and TASK1 
