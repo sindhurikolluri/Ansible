@@ -18,3 +18,13 @@
     loop:
     - mysql
     - git
+
+#accessing the loops in different way 
+  - name: install or delete packages
+    become: yes 
+    ansible.builtin.package:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop:
+    - { name: zip, state: 'absent'}
+    - { name: mysql, state: 'present'}
