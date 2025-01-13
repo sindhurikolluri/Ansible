@@ -11,8 +11,8 @@
     - This is third 
 #Installing packages in using ansible loops 
   - name: install packages
+    become: yes
     ansible.builtin.package:
-      become: yes
       name: "{{ item }}"
       state: installed
     loop:
